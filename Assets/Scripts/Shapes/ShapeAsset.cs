@@ -8,13 +8,13 @@ namespace Game.Shapes
     [CreateAssetMenu(fileName = "ShapeAsset", menuName = "Asset/Shape", order = 51)]
     public class ShapeAsset : ScriptableObject
     {
-        [SerializeField] private GameObject _shapeModel;
+        [SerializeField] private GameObject _model;
         [SerializeField] private Sprite _icon;
         [SerializeField] private Color _color;
         [SerializeField] private ShapeType _type;
 
 
-        public GameObject ShapeModel => _shapeModel;
+        public GameObject Model => _model;
 
         public Sprite Icon => _icon;
 
