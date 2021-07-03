@@ -15,5 +15,6 @@ namespace Game.Shapes
         public GameObject Model => _model.GetProperty(_shapeType);
         public Sprite Icon => _icon.GetProperty(_shapeType);
         public Color Color => _color.GetProperty(_shapeType);
+        public ShapeType ShapeType => _shapeType;
     }
 }
