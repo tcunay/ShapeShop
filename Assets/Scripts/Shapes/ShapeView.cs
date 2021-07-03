@@ -7,5 +7,7 @@ namespace Game.Shapes
     public class ShapeView : MonoBehaviour
     {
         [SerializeField] private ShapeAsset _shapeAsset;
+
+        private GameObject _model;
     }
 }
