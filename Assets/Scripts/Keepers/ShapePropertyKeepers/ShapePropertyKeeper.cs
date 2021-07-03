@@ -1,5 +1,5 @@
-﻿using Game.Enums;
-using UnityEngine;
+﻿using UnityEngine;
+using Game.Types;
 
 namespace Game.Keepers
 {

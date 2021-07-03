@@ -1,8 +1,8 @@
 using UnityEngine;
 using Game.Keepers;
-using Game.Enums;
+using Game.Types;
 
-namespace Game.ScriptableObjects.Items
+namespace Game.Shapes
 {
     [CreateAssetMenu(fileName = "ShapeAsset", menuName = "Assets/Shape", order = 51)]
     public class ShapeAsset : ScriptableObject
