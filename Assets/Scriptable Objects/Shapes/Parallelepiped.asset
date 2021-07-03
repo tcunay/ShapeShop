@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e7c98e980630344f9bacb0a5790000e, type: 3}
-  m_Name: Sphere
+  m_Name: Parallelepiped
   m_EditorClassIdentifier: 
-  _model: {fileID: 4468549334334120004, guid: b6425da38d04e3e479f1e50f5605a523, type: 3}
-  _icon: {fileID: 21300000, guid: 6d9d5d15c13af004393111c1fc781934, type: 3}
-  _color: {r: 0.80392164, g: 0.27450982, b: 0.27450982, a: 0}
-  _type: 1
+  _model: {fileID: 11400000, guid: 3f49e0cf01f3046439245a74774d800d, type: 2}
+  _icon: {fileID: 11400000, guid: fe255fa604bb42542a16487467e889ae, type: 2}
+  _color: {fileID: 11400000, guid: dab2de99bf9d283469b8adb08ef431a9, type: 2}
+  _shapeType: 3

@@ -1,27 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Game.Assets;
 using Game.Keepers;
 using Game.Enums;
 
-namespace Game.Shapes
+namespace Game.ScriptableObjects.Items
 {
-    [CreateAssetMenu(fileName = "ShapeAsset", menuName = "Asset/Shape", order = 51)]
-    public class ShapeAsset : Asset
+    [CreateAssetMenu(fileName = "ShapeAsset", menuName = "Assets/Shape", order = 51)]
+    public class ShapeAsset : ScriptableObject
     {
-        [SerializeField] private ModelsKeeper _model;
-        [SerializeField] private SpritesKeeper _icon;
-        [SerializeField] private ColorsKeeper _color;
-        [SerializeField] private ShapeType _type;
+        [SerializeField] private ShapePropertyKeeper<GameObject> _model;
+        [SerializeField] private ShapePropertyKeeper<Sprite> _icon;
+        [SerializeField] private ShapePropertyKeeper<Color> _color;
+        [SerializeField] private ShapeType _shapeType;
 
-
-        //public GameObject Model => _model.GetProperty();
-
-        //public Sprite Icon => _icon;
-
-        //public Color Color => _color;
-
-        //public ShapeType Type => _type;
+        public GameObject Model => _model.GetProperty(_shapeType);
+        public Sprite Icon => _icon.GetProperty(_shapeType);
+        public Color Color => _color.GetProperty(_shapeType);
     }
 }
