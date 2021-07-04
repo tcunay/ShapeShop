@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc37e217fe88204999497d812aeebbb, type: 3}
   m_Name: ShapeKeepersLibrary
   m_EditorClassIdentifier: 
-  _modelKeeper: {fileID: 0}
-  _iconKeeper: {fileID: 0}
-  _colorKeeper: {fileID: 0}
+  _modelKeeper: {fileID: 11400000, guid: 3f49e0cf01f3046439245a74774d800d, type: 2}
+  _iconKeeper: {fileID: 11400000, guid: fe255fa604bb42542a16487467e889ae, type: 2}
+  _colorKeeper: {fileID: 11400000, guid: dab2de99bf9d283469b8adb08ef431a9, type: 2}

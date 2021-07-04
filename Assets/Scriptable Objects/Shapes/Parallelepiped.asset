@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7c98e980630344f9bacb0a5790000e, type: 3}
   m_Name: Parallelepiped
   m_EditorClassIdentifier: 
-  _model: {fileID: 11400000, guid: 3f49e0cf01f3046439245a74774d800d, type: 2}
-  _icon: {fileID: 11400000, guid: fe255fa604bb42542a16487467e889ae, type: 2}
-  _color: {fileID: 11400000, guid: dab2de99bf9d283469b8adb08ef431a9, type: 2}
+  _shapeKeepersLibrary: {fileID: 11400000, guid: a7acb25e15e268146b028e2b03e13075, type: 2}
   _shapeType: 3
