@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using Game.Types;
+using GameItems.Types;
 
-namespace Game.Keepers
+namespace GameItems.Keepers
 {
     public abstract class ShapePropertyKeeper<T> : PropertyKeeper<T, ShapeType>
     {

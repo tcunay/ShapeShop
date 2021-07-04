@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.Shapes
+namespace GameItems.Shapes
 {
     public class ShapeView : MonoBehaviour
     {

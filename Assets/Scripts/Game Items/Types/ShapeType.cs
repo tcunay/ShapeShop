@@ -1,4 +1,4 @@
-namespace Game.Types
+namespace GameItems.Types
 {
     public enum ShapeType
     {

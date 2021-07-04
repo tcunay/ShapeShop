@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Game.Shapes;
+using GameItems.Shapes;
 
-namespace Game.AssetsLibrary
+namespace GameItems.AssetsLibrary
 {
     [CreateAssetMenu(fileName = "ShapeAssetLibrary", menuName = "Assets/Assets Library/ShapeAssetLibrary", order = 51)]
     public class ShapeAssetsLibrary : ScriptableObject

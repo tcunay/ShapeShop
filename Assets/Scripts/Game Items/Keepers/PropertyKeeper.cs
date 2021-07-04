@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Game.Keepers
+namespace GameItems.Keepers
 {
     public abstract class PropertyKeeper<T, E> : ScriptableObject, IPropertyKeeper<T, E>
     {
