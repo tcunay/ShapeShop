@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameItems.Libraries
+namespace Game.Libraries
 {
     public class AssetsLibrary : ScriptableObject
     {

@@ -1,4 +1,4 @@
-namespace GameItems.Keepers
+namespace Game.Keepers
 {
     public interface IPropertyKeeper<T,E>
     {

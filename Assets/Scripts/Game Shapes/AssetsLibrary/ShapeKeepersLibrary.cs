@@ -1,7 +1,7 @@
 using UnityEngine;
-using GameItems.Keepers;
+using Game.Keepers;
 
-namespace GameItems.Libraries
+namespace Game.Libraries
 {
     [CreateAssetMenu(fileName = "ShapeKeepersLibrary", menuName = "Assets/Assets Library/ShapeKeepersLibrary", order = 51)]
     public class ShapeKeepersLibrary : ScriptableObject

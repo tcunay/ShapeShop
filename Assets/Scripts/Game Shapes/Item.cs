@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using GameItems.Shapes;
+using Game.Shapes;
 using UnityEngine;
 
-namespace GameItems.Items
+namespace Game.Items
 {
     public class Item : MonoBehaviour
     {
