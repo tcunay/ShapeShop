@@ -4,17 +4,27 @@ using Game.Shapes;
 
 namespace Game.Viewers
 {
-    public class ShapeIconViewer : ShapeViewer<Image>
+    [RequireComponent(typeof(Image))]
+    public class ShapeIconViewer : ShapeViewer
     {
-        protected override void InitColorForVisibleObject(Color color, Image visibleObject)
+        private Image _icon;
+
+        public Image Icon => _icon;
+
+        private void Awake()
         {
-            visibleObject.color = color;
+            _icon = GetComponent<Image>();
         }
 
-        protected override void InitVisibleObject(ShapeAsset shapeAsset, Image icon)
+        protected override void InitColorForVisibleObject(Color color)
         {
-            icon.sprite = shapeAsset.Icon;
-            InitColorForVisibleObject(shapeAsset.Color, icon);
+            _icon.color = color;
+        }
+
+        protected override void InitVisibleObject(ShapeAsset shapeAsset)
+        {
+            _icon.sprite = shapeAsset.Icon;
+            InitColorForVisibleObject(shapeAsset.Color);
         }
     }
 }

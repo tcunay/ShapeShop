@@ -1,10 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 namespace Game.Types
 {
-    public enum ShapeType
+    [System.Serializable]
+    public struct ShapeType
     {
-        None,
-        Sphere,
-        Cube,
-        Parallelepiped
+        [SerializeField] private ShapeModelType _model;
+
+        public ShapeModelType Model => _model;
     }
 }

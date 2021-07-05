@@ -3,17 +3,21 @@ using UnityEngine;
 
 namespace Game.Viewers
 {
-    class ShapeModelViewer : ShapeViewer<GameObject>
+    class ShapeModelViewer : ShapeViewer
     {
-        protected override void InitColorForVisibleObject(Color color, GameObject visibleObject)
+        private GameObject _model;
+
+        public GameObject Model => _model;
+
+        protected override void InitColorForVisibleObject(Color color)
         {
-            visibleObject.GetComponent<Renderer>().material.color = color;
+            _model.GetComponent<Renderer>().material.color = color;
         }
 
-        protected override void InitVisibleObject(ShapeAsset shapeAsset, GameObject model)
+        protected override void InitVisibleObject(ShapeAsset shapeAsset)
         {
-            model = Instantiate(shapeAsset.Model, transform);
-            InitColorForVisibleObject(shapeAsset.Color, model);
+            _model = Instantiate(shapeAsset.Model);
+            InitColorForVisibleObject(shapeAsset.Color);
         }
     }
 }

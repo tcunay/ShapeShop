@@ -11,16 +11,16 @@ namespace Game.Keepers
 
         public override T GetProperty(ShapeType type)
         {
-            switch (type)
+            switch (type.Model)
             {
-                case ShapeType.None:
+                case ShapeModelType.None:
                     SendErrorMessage();
                     return default;
-                case ShapeType.Sphere:
+                case ShapeModelType.Sphere:
                     return _sphere;
-                case ShapeType.Cube:
+                case ShapeModelType.Cube:
                     return _cube;
-                case ShapeType.Parallelepiped:
+                case ShapeModelType.Parallelepiped:
                     return _parallelepiped;
                 default:
                     SendErrorMessage();
