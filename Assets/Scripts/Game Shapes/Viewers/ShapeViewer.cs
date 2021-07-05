@@ -6,17 +6,16 @@ namespace Game.Viewers
 {
     public abstract class ShapeViewer<T> : MonoBehaviour where T : Object
     {
+        private T _visibleObject;
         private ShapeAsset _shapeAsset;
         private ShapeType _type;
         private Color _color;
 
-        protected T VisibleObject;
-
-        //public T 
+        public T VisibleObject => _visibleObject;
         public Color Color => _color;
         public ShapeType Type => _type;
 
-        protected abstract void InitVisibleObject(ShapeAsset shapeAsset);
+        protected abstract void InitVisibleObject(ShapeAsset shapeAsset, T visibleObject);
 
         protected abstract void InitColorForVisibleObject(Color color, T visibleObject);
 
@@ -25,20 +24,8 @@ namespace Game.Viewers
             _shapeAsset = shapeAsset;
             _color = shapeAsset.Color;
             InitType(shapeAsset.ShapeType);
-            InitVisibleObject(shapeAsset);
+            InitVisibleObject(shapeAsset , _visibleObject);
         }
-
-        //private void InitModel(GameObject model, Color color)
-        //{
-        //    _model = Instantiate(model, transform);
-        //    _model.GetComponent<Renderer>().material.color = color;
-        //}
-
-        //private void InitIcon(Sprite sprite, Color color)
-        //{
-        //    _icon.sprite = sprite;
-        //    _icon.color = color;
-        //}
 
         private void InitType(ShapeType type)
         {

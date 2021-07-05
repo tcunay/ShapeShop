@@ -10,10 +10,10 @@ namespace Game.Viewers
             visibleObject.GetComponent<Renderer>().material.color = color;
         }
 
-        protected override void InitVisibleObject(ShapeAsset shapeAsset)
+        protected override void InitVisibleObject(ShapeAsset shapeAsset, GameObject model)
         {
-            VisibleObject = Instantiate(shapeAsset.Model, transform);
-            InitColorForVisibleObject(shapeAsset.Color, VisibleObject);
+            model = Instantiate(shapeAsset.Model, transform);
+            InitColorForVisibleObject(shapeAsset.Color, model);
         }
     }
 }
