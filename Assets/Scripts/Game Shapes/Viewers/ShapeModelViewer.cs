@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Viewers
 {
-    class ShapeModelViewer : ShapeViewer
+    public class ShapeModelViewer : ShapeViewer
     {
         private GameObject _model;
 
