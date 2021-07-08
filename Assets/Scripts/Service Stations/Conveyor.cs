@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Salvers;
 using UnityEngine;
 
 namespace Game.ServiceStations
 {
     [System.Serializable]
-    public class Conveyor
+    public class Conveyor : ICanNotDestroyable
     {
         [SerializeField] private Transform _startPoint;
         [SerializeField] private Transform _endPoint;
@@ -15,6 +16,7 @@ namespace Game.ServiceStations
         private Transform _transportedObject;
 
         public event Action TransportEnded;
+        public event Action<Salver> NeededDestroy;
 
         public IEnumerator Transport(Transform transportedObject)
         {

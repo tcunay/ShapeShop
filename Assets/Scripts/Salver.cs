@@ -4,18 +4,23 @@ using Game.Viewers;
 
 namespace Game.Salvers
 {
-    public class ShapesSalver : MonoBehaviour
+    public class Salver : MonoBehaviour
     {
         private Queue<ShapeModelViewer> _shapeModels;
-        private int _capacity;
+        private int _capacity = 3;
 
         public Queue<ShapeModelViewer> Shapes => _shapeModels;
 
-        public void Init(int capacity)
+        private void Awake()
         {
-            _capacity = capacity;
-            _shapeModels = new Queue<ShapeModelViewer>(capacity);
+            _shapeModels = new Queue<ShapeModelViewer>(_capacity);
         }
+
+        //public void Init(int capacity)
+        //{
+        //    _capacity = capacity;
+        //    _shapeModels = new Queue<ShapeModelViewer>(capacity);
+        //}
 
         public void Add(ShapeModelViewer item)
         {
@@ -26,6 +31,7 @@ namespace Game.Salvers
 
             _shapeModels.Enqueue(item);
         }
+
         private void DeleteFirst()
         {
             _shapeModels.Dequeue();
@@ -33,8 +39,7 @@ namespace Game.Salvers
 
         private bool IsFull()
         {
-            return false;
-            //return _shapeModels.Count >= _capacity;
+           return _shapeModels.Count >= _capacity;
         }
     }
 }
