@@ -1,13 +1,14 @@
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Game.AssetsLibrary;
-using System;
 using Game.Shapes;
+using Game.Spawners;
 
 namespace Game.UI
 {
-    public class SpawnButtonsPanel : MonoBehaviour
+    public class SpawnButtonsPanel : MonoBehaviour, IReportNeedSpawnable
     {
         [SerializeField] private ShapeAssetsLibrary _assetsLibrary;
         [SerializeField] private Button _confirmationButtonTemplate;

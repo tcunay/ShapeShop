@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Viewers;
+using Game.Spawners;
 
 namespace Game.Salvers
 {
     public class Salver : MonoBehaviour
     {
         private Queue<ShapeModelViewer> _shapeModels;
+        private IReportNeedSpawnable _reportNeedSpawnable;
         private int _capacity = 3;
 
         public Queue<ShapeModelViewer> Shapes => _shapeModels;
