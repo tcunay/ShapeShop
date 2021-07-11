@@ -1,9 +1,8 @@
 using System;
-using Game.Shapes;
-using Game.Viewers;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.UI.Button;
+using Game.Shapes;
+using Game.Viewers;
 
 namespace Game.UI
 {

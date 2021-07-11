@@ -5,14 +5,16 @@ using UnityEngine.UI;
 using Game.AssetsLibrary;
 using Game.Shapes;
 using Game.Spawners;
+using Game.ServiceStations;
 
 namespace Game.UI
 {
-    public class SpawnButtonsPanel : MonoBehaviour, IReportNeedSpawnable
+    public class SpawnButtonsPanel : MonoBehaviour
     {
         [SerializeField] private ShapeAssetsLibrary _assetsLibrary;
         [SerializeField] private Button _confirmationButtonTemplate;
         [SerializeField] private SpawnButton _template;
+        [SerializeField] private SalverStand _stand;
 
         private List<SpawnButton> _spawnButtons;
         private Button _confirmationButton;

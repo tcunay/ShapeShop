@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Viewers;
-using Game.Spawners;
+using Game.Shapes;
 
 namespace Game.Salvers
 {
     public class Salver : MonoBehaviour
     {
         private Queue<ShapeModelViewer> _shapeModels;
-        private IReportNeedSpawnable _reportNeedSpawnable;
         private int _capacity = 3;
 
         public Queue<ShapeModelViewer> Shapes => _shapeModels;
@@ -18,20 +17,16 @@ namespace Game.Salvers
             _shapeModels = new Queue<ShapeModelViewer>(_capacity);
         }
 
-        //public void Init(int capacity)
-        //{
-        //    _capacity = capacity;
-        //    _shapeModels = new Queue<ShapeModelViewer>(capacity);
-        //}
-
-        public void Add(ShapeModelViewer item)
+        public void Add(ShapeAsset asset)
         {
             if (IsFull())
             {
                 DeleteFirst();
             }
 
-            _shapeModels.Enqueue(item);
+            ShapeModelViewer shapeViewer = new ShapeModelViewer();
+            shapeViewer.Init(asset);
+            _shapeModels.Enqueue(shapeViewer);
         }
 
         private void DeleteFirst()
@@ -41,7 +36,12 @@ namespace Game.Salvers
 
         private bool IsFull()
         {
-           return _shapeModels.Count >= _capacity;
+            return _shapeModels.Count >= _capacity;
+        }
+
+        public void TransferTo(Transform target)
+        {
+            transform.SetParent(transform);
         }
     }
 }

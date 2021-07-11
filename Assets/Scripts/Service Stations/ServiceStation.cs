@@ -7,20 +7,18 @@ namespace Game.ServiceStations
     public class ServiceStation : MonoBehaviour
     {
         [SerializeField] private Conveyor _conveyor;
-        [SerializeField] private Stand _startSalverStand;
+        [SerializeField] private SalverStand _startSalverStand;
         [SerializeField] private Salver _template;
 
         private List<Salver> _salvers = new List<Salver>();
 
         private void OnEnable()
         {
-            _startSalverStand.NeededDestroy += DestroySalver;
             _conveyor.NeededDestroy += DestroySalver;
         }
 
         private void OnDisable()
         {
-            _startSalverStand.NeededDestroy -= DestroySalver;
             _conveyor.NeededDestroy -= DestroySalver;
         }
 

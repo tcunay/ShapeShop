@@ -50,8 +50,7 @@ MonoBehaviour:
     _startPoint: {fileID: 2876023584447468196}
     _endPoint: {fileID: 2901708582637131289}
     _transportSpeed: 1
-  _startSalverStand:
-    _standingPoint: {fileID: 1889309048760194880}
+  _startSalverStand: {fileID: 3522074135547982868, guid: 4ad59baa8f8279d4e9d819a56472bf0e, type: 3}
   _template: {fileID: -4896665980939262627, guid: b8772b680ac05c241bb25a7b427902f1, type: 3}
 --- !u!1001 &1178697865516045656
 PrefabInstance:
@@ -251,10 +250,5 @@ PrefabInstance:
 --- !u!4 &6336561435194857862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3490054006833597387, guid: 4ad59baa8f8279d4e9d819a56472bf0e, type: 3}
-  m_PrefabInstance: {fileID: 7458194823728878157}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1889309048760194880 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9059263589928142093, guid: 4ad59baa8f8279d4e9d819a56472bf0e, type: 3}
   m_PrefabInstance: {fileID: 7458194823728878157}
   m_PrefabAsset: {fileID: 0}

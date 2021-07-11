@@ -585,6 +585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4535216681543298767, guid: e99c37d68f99e574280a7277755350c5, type: 3}
+      propertyPath: _stand
+      value: 
+      objectReference: {fileID: 6336561436460703827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99c37d68f99e574280a7277755350c5, type: 3}
 --- !u!1001 &6336561436460703826
@@ -644,3 +648,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0db74c6621d64dc47acc318882d719b3, type: 3}
+--- !u!114 &6336561436460703827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6296102023828465241, guid: 0db74c6621d64dc47acc318882d719b3, type: 3}
+  m_PrefabInstance: {fileID: 6336561436460703826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9707ee63630d2f4eb70669f941cda05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
