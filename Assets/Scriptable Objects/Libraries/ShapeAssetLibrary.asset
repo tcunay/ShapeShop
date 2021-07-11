@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shapeAssets:
   - {fileID: 11400000, guid: b1305f95eeb4b4845859292cd344f4cd, type: 2}
-  - {fileID: 11400000, guid: dd64143cd22977f4aa7559dd838a09b2, type: 2}
   - {fileID: 11400000, guid: a57e59e679ab8db45ab34a8474c43c13, type: 2}
+  - {fileID: 11400000, guid: dd64143cd22977f4aa7559dd838a09b2, type: 2}

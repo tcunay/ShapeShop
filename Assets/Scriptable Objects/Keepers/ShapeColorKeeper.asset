@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773d04010e0cc3d49a0283707a4abf26, type: 3}
   m_Name: ShapeColorKeeper
   m_EditorClassIdentifier: 
-  _sphere: {r: 0.92549026, g: 0.2627451, b: 0.2627451, a: 0}
-  _cube: {r: 0.2627451, g: 0.8588236, b: 0.5019608, a: 0}
-  _parallelepiped: {r: 0.37647063, g: 0.6666667, b: 0.97647065, a: 0}
+  _sphere: {r: 0.92549026, g: 0.2627451, b: 0.2627451, a: 1}
+  _cube: {r: 0.2627451, g: 0.8588236, b: 0.5019608, a: 1}
+  _parallelepiped: {r: 0.37647063, g: 0.6666667, b: 0.97647065, a: 1}
