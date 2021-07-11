@@ -6,9 +6,11 @@ namespace Game.Viewers
 {
     public abstract class ShapeViewer : MonoBehaviour
     {
+        private ShapeAsset _shapeAsset;
         private Color _color;
         private ShapeModelType _type;
 
+        public ShapeAsset Asset => _shapeAsset;
         public Color Color => _color;
         public ShapeModelType Type => _type;
 
@@ -18,6 +20,7 @@ namespace Game.Viewers
 
         public void Init(ShapeAsset shapeAsset)
         {
+            _shapeAsset = shapeAsset;
             _color = shapeAsset.Color;
             InitType(shapeAsset.ShapeType.Model);
             InitVisibleObject(shapeAsset);

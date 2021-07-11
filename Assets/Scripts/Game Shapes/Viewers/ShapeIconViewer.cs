@@ -4,17 +4,11 @@ using Game.Shapes;
 
 namespace Game.Viewers
 {
-    [RequireComponent(typeof(Image))]
     public class ShapeIconViewer : ShapeViewer
     {
-        private Image _icon;
+        [SerializeField] private Image _icon;
 
         public Image Icon => _icon;
-
-        private void Awake()
-        {
-            _icon = GetComponent<Image>();
-        }
 
         protected override void InitColorForVisibleObject(Color color)
         {

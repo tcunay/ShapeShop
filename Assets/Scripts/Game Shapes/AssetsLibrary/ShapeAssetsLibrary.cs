@@ -8,5 +8,7 @@ namespace Game.AssetsLibrary
     public class ShapeAssetsLibrary : ScriptableObject
     {
         [SerializeField] private List<ShapeAsset> _shapeAssets;
+
+        public List<ShapeAsset> Assets => _shapeAssets;
     }
 }

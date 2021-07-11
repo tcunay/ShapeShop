@@ -16,7 +16,7 @@ namespace Game.Viewers
 
         protected override void InitVisibleObject(ShapeAsset shapeAsset)
         {
-            _model = Instantiate(shapeAsset.Model);
+            _model = Instantiate(shapeAsset.Model, transform);
             InitColorForVisibleObject(shapeAsset.Color);
         }
     }
