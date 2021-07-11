@@ -55,7 +55,7 @@ namespace Game.UI
 
         private void OnSpawnButtonClicked(ShapeAsset shapeAsset)
         {
-            SpawnNeeded?.Invoke(shapeAsset);
+            _stand.SpawnShapeInSalver(shapeAsset);
         }
 
         private void UnsubscribeFromSpawbButtons()

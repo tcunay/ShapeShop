@@ -7,6 +7,9 @@ namespace Game.Salvers
 {
     public class Salver : MonoBehaviour
     {
+        [SerializeField] private ShapeModelViewer _viewerTemplate;
+        [SerializeField] private Transform _content;
+
         private Queue<ShapeModelViewer> _shapeModels;
         private int _capacity = 3;
 
@@ -24,13 +27,15 @@ namespace Game.Salvers
                 DeleteFirst();
             }
 
-            ShapeModelViewer shapeViewer = new ShapeModelViewer();
+            ShapeModelViewer shapeViewer = Instantiate(_viewerTemplate, _content);
             shapeViewer.Init(asset);
             _shapeModels.Enqueue(shapeViewer);
         }
 
         private void DeleteFirst()
         {
+            var a = _shapeModels.Peek();
+            Destroy(a.gameObject);
             _shapeModels.Dequeue();
         }
 

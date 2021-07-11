@@ -140,3 +140,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _standingPoint: {fileID: 9059263589928142093}
+  _template: {fileID: 7857700668954812185, guid: b8772b680ac05c241bb25a7b427902f1, type: 3}

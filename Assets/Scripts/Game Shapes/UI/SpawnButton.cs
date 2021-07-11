@@ -7,11 +7,11 @@ using Game.Viewers;
 namespace Game.UI
 {
     [RequireComponent(typeof(Button))]
-    [RequireComponent(typeof(ShapeIconViewer))]
     public class SpawnButton : MonoBehaviour
     {
+        [SerializeField] private ShapeIconViewer _viewer;
+
         private Button _button;
-        private ShapeIconViewer _viewer;
 
         public ShapeViewer Viewer => _viewer;
         public Action<ShapeAsset> OnClick;// => _button.onClick;
@@ -19,7 +19,6 @@ namespace Game.UI
         private void Awake()
         {
             _button = GetComponent<Button>();
-            _viewer = GetComponent<ShapeIconViewer>();
         }
 
         private void OnEnable()

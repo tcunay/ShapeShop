@@ -11,7 +11,7 @@ namespace Game.Viewers
 
         protected override void InitColorForVisibleObject(Color color)
         {
-            _model.GetComponent<Renderer>().material.color = color;
+            _model.GetComponentInChildren<Renderer>().material.color = color;
         }
 
         protected override void InitVisibleObject(ShapeAsset shapeAsset)

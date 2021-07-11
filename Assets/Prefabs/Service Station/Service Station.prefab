@@ -183,7 +183,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: End Stand For Salvers
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3522074135547982868, guid: 4ad59baa8f8279d4e9d819a56472bf0e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4ad59baa8f8279d4e9d819a56472bf0e, type: 3}
 --- !u!4 &5776051428588844530 stripped
 Transform:
