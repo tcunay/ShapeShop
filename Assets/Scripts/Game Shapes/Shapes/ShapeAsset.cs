@@ -1,11 +1,12 @@
 using UnityEngine;
 using Game.Types;
 using Game.Libraries;
+using UnityEngine.Tilemaps;
 
 namespace Game.Shapes
 {
     [CreateAssetMenu(fileName = "ShapeAsset", menuName = "Assets/Shape", order = 51)]
-    public class ShapeAsset : ScriptableObject
+    public class ShapeAsset : Tile
     {
         [SerializeField] private ShapeKeepersLibrary _shapeKeepersLibrary;
         [SerializeField] private ShapeType _shapeType;

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game.Viewers;
 using Game.Shapes;
+using UnityEngine.Tilemaps;
 
 namespace Game.Salvers
 {
@@ -9,9 +10,15 @@ namespace Game.Salvers
     {
         [SerializeField] private ShapeModelViewer _viewerTemplate;
         [SerializeField] private Transform _content;
+        [SerializeField] private Grid _grid;
+        [SerializeField] private Tilemap _tilemap;
+        //[SerializeField] private TileBase _tileBase;
+        [SerializeField] private GameObject _cube;
+        [SerializeField] private Tile _salverModel;
 
         private Queue<ShapeModelViewer> _shapeModels;
         private int _capacity = 3;
+        private TileData _tileData;
 
         public Queue<ShapeModelViewer> Shapes => _shapeModels;
 
@@ -20,16 +27,22 @@ namespace Game.Salvers
             _shapeModels = new Queue<ShapeModelViewer>(_capacity);
         }
 
+        private void Start()
+        {
+            _tilemap.FloodFill(new Vector3Int(0, 0, 0), _salverModel);
+        }
+
         public void Add(ShapeAsset asset)
         {
             if (IsFull())
             {
                 DeleteFirst();
             }
-
-            ShapeModelViewer shapeViewer = Instantiate(_viewerTemplate, _content);
-            shapeViewer.Init(asset);
-            _shapeModels.Enqueue(shapeViewer);
+            _tilemap.ClearAllTiles();
+            _tilemap.FloodFill(new Vector3Int(1, 0, 0), asset);
+            //ShapeModelViewer shapeViewer = Instantiate(_viewerTemplate, _content);
+            //shapeViewer.Init(asset);
+            //_shapeModels.Enqueue(shapeViewer);
         }
 
         private void DeleteFirst()
