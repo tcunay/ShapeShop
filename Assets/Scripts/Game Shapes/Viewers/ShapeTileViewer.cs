@@ -1,27 +1,27 @@
-﻿using Game.Shapes;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
+using Game.Shapes;
 
 namespace Game.Viewers
 {
     public class ShapeTileViewer : ShapeViewer
     {
         private Tile _tile;
-        private ModelContainer _modelContainer;
+        private GameObject _model;
 
         protected override void SetColorForVisibleObject(Color color)
         {
-            _modelContainer.Renderer.material.color = color;
+            _model.GetComponentInChildren<Renderer>().material.color = color;
         }
 
         protected override void InitVisibleObject(ShapeAsset shapeAsset)
         {
-            _modelContainer = Instantiate(shapeAsset.ModelContainer);
+            _model = Instantiate(shapeAsset.ModelContainer);
 
             SetColorForVisibleObject(shapeAsset.Color);
-            InitTile(_modelContainer.gameObject);
+            InitTile(_model);
 
-            Destroy(_modelContainer.gameObject);
+            Destroy(_model);
         }
 
         public void Show(Vector3Int position, Tilemap tilemap)
@@ -31,7 +31,7 @@ namespace Game.Viewers
 
         private void InitTile(GameObject model)
         {
-            _tile = new Tile();
+            _tile = ScriptableObject.CreateInstance<Tile>();
             SetModel(model);
         }
 
