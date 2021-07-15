@@ -16,7 +16,7 @@ namespace Game.Viewers
 
         protected abstract void InitVisibleObject(ShapeAsset shapeAsset);
 
-        protected abstract void InitColorForVisibleObject(Color color);
+        protected abstract void SetColorForVisibleObject(Color color);
 
         public void Init(ShapeAsset shapeAsset)
         {

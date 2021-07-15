@@ -158,6 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4440272035063305498}
   - component: {fileID: 7857700668954812185}
+  - component: {fileID: -4972169076944950207}
   m_Layer: 0
   m_Name: Salver
   m_TagString: Untagged
@@ -194,12 +195,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4840f2291ce69449829b9aa8796e5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewerTemplate: {fileID: 1509490716819664247, guid: 35188808f2649ce41b3617e9661f3f1b, type: 3}
+  _viewerTemplate: {fileID: -4972169076944950207}
   _content: {fileID: 7476988965344907408}
   _grid: {fileID: 8508659733459301448}
   _tilemap: {fileID: 1005618078762568182}
   _cube: {fileID: 7318283952727190999, guid: 7113bf0cff1c12645a8a64e0f9f3c0d1, type: 3}
   _salverModel: {fileID: 11400000, guid: e0e743dc0b7d53048b057ba82a0b58bc, type: 2}
+--- !u!114 &-4972169076944950207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775032671056546000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e330395debfeada499275575d2e21915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4781767544288802384
 GameObject:
   m_ObjectHideFlags: 0

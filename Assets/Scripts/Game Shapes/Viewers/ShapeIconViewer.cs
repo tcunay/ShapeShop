@@ -16,7 +16,7 @@ namespace Game.Viewers
             _icon = GetComponent<Image>();
         }
 
-        protected override void InitColorForVisibleObject(Color color)
+        protected override void SetColorForVisibleObject(Color color)
         {
             _icon.color = color;
         }
@@ -24,7 +24,7 @@ namespace Game.Viewers
         protected override void InitVisibleObject(ShapeAsset shapeAsset)
         {
             _icon.sprite = shapeAsset.Icon;
-            InitColorForVisibleObject(shapeAsset.Color);
+            SetColorForVisibleObject(shapeAsset.Color);
         }
     }
 }
