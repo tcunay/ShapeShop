@@ -43,9 +43,10 @@ namespace Game.Salvers
                 _currentQuantity = 0;
 
             _viewerTemplate.Init(asset);
-            Tile tile = new Tile();
-            tile.gameObject = _viewerTemplate.Model;
-            _tilemap.SetTile(positionsLibrary.Positions[_currentQuantity], tile);
+            //Tile tile = new Tile();
+            //tile.gameObject = _viewerTemplate.Model;
+            _tilemap.SetTile(positionsLibrary.Positions[_currentQuantity], _viewerTemplate.TIle);
+            
 
             _currentQuantity++;
         }

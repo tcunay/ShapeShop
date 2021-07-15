@@ -1,23 +1,24 @@
 ﻿using Game.Shapes;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Game.Viewers
 {
     public class ShapeModelViewer : ShapeViewer
     {
-        private GameObject _model;
+        private Tile _tile;
 
-        public GameObject Model => _model;
+        public Tile TIle => _tile;
 
         protected override void InitColorForVisibleObject(Color color)
         {
-            _model.GetComponentInChildren<Renderer>().material.color = color;
+            _tile.gameObject.GetComponent<Renderer>().material.color = color;
         }
 
         protected override void InitVisibleObject(ShapeAsset shapeAsset)
         {
-            _model = Instantiate(shapeAsset.Model);
-            InitColorForVisibleObject(shapeAsset.Color);
+            _tile = shapeAsset; //Instantiate(shapeAsset.Model);
+            //InitColorForVisibleObject(shapeAsset.Color);
         }
     }
 }

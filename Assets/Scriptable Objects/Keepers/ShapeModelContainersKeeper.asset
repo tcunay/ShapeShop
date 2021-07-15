@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9222d0c91957225468fe89d692f1b923, type: 3}
-  m_Name: ShapeModelsKeeper
+  m_Name: ShapeModelContainersKeeper
   m_EditorClassIdentifier: 
-  _sphere: {fileID: 2655513020271451650, guid: b6425da38d04e3e479f1e50f5605a523, type: 3}
-  _cube: {fileID: 7318283952727190999, guid: 7113bf0cff1c12645a8a64e0f9f3c0d1, type: 3}
-  _parallelepiped: {fileID: 6290221127475079305, guid: 2607e9582367a814db72667ac15ef616, type: 3}
+  _sphere: {fileID: 0}
+  _cube: {fileID: 0}
+  _parallelepiped: {fileID: 0}
