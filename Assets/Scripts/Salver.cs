@@ -14,7 +14,7 @@ namespace Game.Salvers
         private ShapeTileViewer _viewer;
         private TilePositionsLibrary positionsLibrary = new TilePositionsLibrary();
         private int _capacity;
-        private int _currentQuantity = 0;
+        private int _currentIndex = 0;
 
         private void Awake()
         {
@@ -24,18 +24,18 @@ namespace Game.Salvers
 
         public void Add(ShapeAsset asset)
         {
-            if (IsFull())
-                _currentQuantity = 0;
+            if (IsLastIndex())
+                _currentIndex = 0;
 
             _viewer.Init(asset);
-            _viewer.Show(positionsLibrary.Positions[_currentQuantity], _tilemap);
+            _viewer.Show(positionsLibrary.Positions[_currentIndex], _tilemap);
 
-            _currentQuantity++;
+            _currentIndex++;
         }
 
-        private bool IsFull()
+        private bool IsLastIndex()
         {
-            return _currentQuantity >= _capacity;
+            return _currentIndex >= _capacity;
         }
 
         public void TransferTo(Transform target)
