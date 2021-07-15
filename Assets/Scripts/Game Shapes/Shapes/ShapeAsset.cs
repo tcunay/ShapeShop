@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 namespace Game.Shapes
 {
     [CreateAssetMenu(fileName = "ShapeAsset", menuName = "Assets/Shape", order = 51)]
-    public class ShapeAsset : Tile
+    public class ShapeAsset : ScriptableObject
     {
         [SerializeField] private ShapeKeepersLibrary _shapeKeepersLibrary;
         [SerializeField] private ShapeType _shapeType;

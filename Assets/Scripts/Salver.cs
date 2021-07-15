@@ -3,9 +3,17 @@ using UnityEngine;
 using Game.Viewers;
 using Game.Shapes;
 using UnityEngine.Tilemaps;
+using System.Numerics;
 
 namespace Game.Salvers
 {
+    public class TilePositionsLibrary
+    {
+        private Vector3Int[] _positions = { new Vector3Int(2, 1, 0), new Vector3Int(4, 1, 0), new Vector3Int(3, 2, 0) };
+
+        public Vector3Int[] Positions => _positions;
+    }
+
     public class Salver : MonoBehaviour
     {
         [SerializeField] private ShapeModelViewer _viewerTemplate;
@@ -16,33 +24,30 @@ namespace Game.Salvers
         [SerializeField] private GameObject _cube;
         [SerializeField] private Tile _salverModel;
 
-        private Queue<ShapeModelViewer> _shapeModels;
-        private int _capacity = 3;
-        private TileData _tileData;
+        private Queue<GameObject> _shapeModels;
+        private TilePositionsLibrary positionsLibrary = new TilePositionsLibrary();
+        private int _capacity;
+        private int _currentQuantity = 0;
 
-        public Queue<ShapeModelViewer> Shapes => _shapeModels;
+        public Queue<GameObject> Shapes => _shapeModels;
 
         private void Awake()
         {
-            _shapeModels = new Queue<ShapeModelViewer>(_capacity);
-        }
-
-        private void Start()
-        {
-            _tilemap.FloodFill(new Vector3Int(0, 0, 0), _salverModel);
+            _capacity = positionsLibrary.Positions.Length;
+            _shapeModels = new Queue<GameObject>(_capacity);
         }
 
         public void Add(ShapeAsset asset)
         {
-            if (IsFull())
-            {
-                DeleteFirst();
-            }
-            _tilemap.ClearAllTiles();
-            _tilemap.FloodFill(new Vector3Int(1, 0, 0), asset);
-            //ShapeModelViewer shapeViewer = Instantiate(_viewerTemplate, _content);
-            //shapeViewer.Init(asset);
-            //_shapeModels.Enqueue(shapeViewer);
+            if (_currentQuantity >= _capacity)
+                _currentQuantity = 0;
+
+            _viewerTemplate.Init(asset);
+            Tile tile = new Tile();
+            tile.gameObject = _viewerTemplate.Model;
+            _tilemap.SetTile(positionsLibrary.Positions[_currentQuantity], tile);
+
+            _currentQuantity++;
         }
 
         private void DeleteFirst()
